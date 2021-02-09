@@ -35,5 +35,12 @@
       </div>
     </li>
   </ul>
+  <a href="{{ route('posts.edit', $post->id) }}">Modifica</a><br>
+  <a href="{{ route('posts.index')}}">Indietro</a><br>
+  <form action="{{ route('posts.destroy', $post->id) }}" method="post">
+    @csrf
+    @method("delete")
+    <button type="submit" class="btn btn-danger">Elimina</button>
+  </form>
 </div>
 @endsection

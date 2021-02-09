@@ -24,9 +24,12 @@
     <td>
       <a href="{{ route('posts.show', $post->id) }}">Mostra Post</a>
     </td>
-    <td>
+    <!-- <td>
       <a href="{{ route('posts.edit', $post->id) }}">Modifica</a>
-    </td>
+    </td> -->
+    <!-- <td>
+      <a href="{{ route('posts.edit', $post->id) }}">Elimina</a>
+    </td> -->
   </tr>
   @endforeach
 </tbody>
