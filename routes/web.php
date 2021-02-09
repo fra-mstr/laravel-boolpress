@@ -21,13 +21,15 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::prefix('free-zone')
-->group(function () {
-    Route::get('hello', 'TestController@guest')->name('free-zone');
-});
+// Route::prefix('free-zone')
+// ->group(function () {
+//     Route::get('hello', 'TestController@guest')->name('free-zone');
+// });
+//
+// Route::prefix('restricted-zone')
+//   ->middleware('auth')
+//   ->group(function () {
+//       Route::get('hello', 'TestController@admin')->name('restricted-zone');
+// });
 
-Route::prefix('restricted-zone')
-  ->middleware('auth')
-  ->group(function () {
-      Route::get('hello', 'TestController@admin')->name('restricted-zone');
-});
+Route::resource('/posts', 'PostsController');
